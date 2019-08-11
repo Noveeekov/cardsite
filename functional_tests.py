@@ -13,7 +13,7 @@ class NewTests ( unittest.TestCase ):
         self.browser.quit()
 
     def test_start_server ( self ):
-        '''запуск локального сервера'''
+        '''тест: запуск локального сервера'''
         self.browser.get( 'http://localhost:8000' )
 
 if __name__ == '__main__':
