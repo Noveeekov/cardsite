@@ -3,5 +3,5 @@ from django.shortcuts import render
 
 def homepage ( request ):
     # return HttpResponse( '<html><title>To-Do page</title></html>' )
-    return render( request, 'startpage.html' )
+    return render( request, 'landing_1.html' )
 

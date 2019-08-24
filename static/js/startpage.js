@@ -1,4 +1,4 @@
-var cnv = document.getElementById( 'canvas' ),
+let cnv = document.getElementById( 'canvas' ),
 	ctx = cnv.getContext( '2d' ),
 	wdt = cnv.width = window.innerWidth,
 	hgh = cnv.height = window.innerHeight,
