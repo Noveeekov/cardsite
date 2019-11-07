@@ -1,0 +1,8 @@
+nav {
+  border: 1px solid white; }
+
+body {
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  transition: .3s; }
