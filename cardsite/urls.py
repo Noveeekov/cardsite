@@ -20,5 +20,6 @@ from startpage import views
 urlpatterns = [
     # path( 'admin/', admin.site.urls ),
     path( '', views.homepage, name='home' ),
-    path( 'landing', views.landing, name='landing' )
+    path( 'landing', views.landing, name='landing' ),
+    path( 'landing1', views.landing1, name='landing1' ),
 ]

@@ -7,3 +7,6 @@ def homepage ( request ):
 
 def landing ( request ):
     return render( request, 'startup.html' )
+
+def landing1 ( request ):
+    return render( request, 'studiosites.html' )
