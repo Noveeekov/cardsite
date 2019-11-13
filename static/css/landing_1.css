@@ -1,19 +1,19 @@
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 .btn {
-  font-family: 'Lato', sans-serif;
-  border: none;
-  border-radius: 2px;
-  background-color: #ffbb42;
-  font-size: 14px;
-  line-height: 19px;
-  font-weight: normal;
-  text-transform: uppercase;
-  color: white;
-  padding: 10px 30px;
-  cursor: pointer;
+    padding: 10px 30px;
+    font-family: 'Lato', sans-serif;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 19px;
+    color: white;
+    text-transform: uppercase;
+    cursor: pointer;
+    background-color: #ffbb42;
+    border: none;
+    border-radius: 2px;
 }
 
 @media (min-width: 992px) {

@@ -1,0 +1,177 @@
+// Colors ===================================================
+// Palettes =================================================
+// Beautiful woman in a colorful wig ( adobe )
+
+$body-background: #25c7d9;
+$side-background: rgba(0, 255, 255, 0.6);
+$template-border: #f0f2eb;
+$template-title-background-orange: #f2762e;
+$template-title-background-red: #f23030;
+$template-title-border: rgb(242, 109, 133);
+$template-content-background: rgb(217, 205, 184);
+$template-shadow: #248ea6;
+
+// Colors ===================================================
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    padding-top: 100px;
+    font-family: sans-serif;
+    background-color: $body-background;
+    background-image: url('../image/bcg.png');
+}
+
+// Particles ================================================
+
+#particles {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+}
+
+// Particles ================================================
+
+// Cube =====================================================
+.cube-wrapper {
+    perspective: 1000px;
+
+    .cube {
+        position: relative;
+        width: 300px;
+        height: 300px;
+        margin: 0 auto;
+        transform-style: preserve-3d;
+
+        .side {
+            position: absolute;
+            width: inherit;
+            height: inherit;
+            color: white;
+            background-color: $side-background;
+            background-image: url('../image/H.svg');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+            border: 1px solid white;
+            transition: 3s;
+        }
+
+        .top {
+            transform: rotateX(90deg) translateZ(150px);
+        }
+
+        .right {
+            transform: rotateY(-90deg) translateZ(-150px);
+        }
+
+        .bottom {
+            transform: rotateX(-90deg) translateZ(150px);
+        }
+
+        .left {
+            transform: rotateY(90deg) translateZ(-150px);
+        }
+
+        .front {
+            transform: translateZ(150px);
+        }
+
+        .back {
+            transform: rotateX(180deg) translateZ(150px);
+        }
+
+        &:hover .top {
+            transform: rotateX(180deg) translateZ(150px) translateY(300px);
+        }
+    }
+}
+// Cube =====================================================
+
+// Post =====================================================
+
+// Section for templates
+.templates {
+    display: flex;
+    justify-content: space-around;
+}
+
+@media only screen and (max-width: 600px) {
+    .templates {
+        flex-direction: column;
+        align-items: center;
+
+        article {
+            & + article {
+                margin-top: 40px;
+            }
+        }
+
+        img {
+            transform: rotateY(0);
+        }
+    }
+}
+
+// Template block
+article {
+    width: 320px;
+    text-align: center;
+    border: none;
+    border-radius: 6px;
+    box-shadow: 6px 6px 2px $template-shadow;
+
+    // Title template
+    h1 {
+        padding: .67em;
+        margin: 0;
+        border: none;
+        border-top-left-radius: 6px;
+        border-top-right-radius: 6px;
+    }
+
+    // Template content
+    div {
+        overflow: hidden;
+        background-color: $template-content-background;
+        border-bottom-right-radius: 6px;
+        border-bottom-left-radius: 6px;
+
+        // Image template
+        img {
+            width: 100%;
+            height: 100%;
+            border-bottom-right-radius: 6px;
+            border-bottom-left-radius: 6px;
+            backface-visibility: hidden;
+            transition: .5s;
+            transform: rotateY(180deg);
+        }
+
+        // Rotate the image on mouse hover
+        &:hover img {
+            transform: rotateY(0);
+        }
+    }
+}
+
+.landing {
+    h1 {
+        color: $template-content-background;
+        background-color: $template-title-background-red;
+    }
+}
+
+.landing-1 {
+    h1 {
+        color: $template-content-background;
+        background-color: $template-title-background-orange;
+    }
+}
+
+// Post =====================================================

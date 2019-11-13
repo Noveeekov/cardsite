@@ -5,7 +5,10 @@ const
     gulpStylelint = require( 'gulp-stylelint' );
 
 function style () {
-    return gulp.src( './static/scss/**/*.scss' )
+    return gulp.src([
+        './static/scss/*.scss',
+        '!./static/scss/normalize.scss'
+    ])
           .pipe( gulpStylelint({
               reporters: [
                   {
@@ -14,22 +17,27 @@ function style () {
                   }
               ]
           }))
-          .pipe( sass())
+          .pipe( sass({
+              indentType: 'space',
+              indentWidth: 4,
+              outputStyle: 'expanded'
+          }))
           .pipe( gulp.dest( './static/css' ))
           .pipe( browserSync.stream());
 }
 
 function watch () {
     browserSync.init({
+        open: false,
         server: {
-            baseDir: './templates'
-        },
-        open: false
+            baseDir: './',
+            index: './templates/index.html'
+        }
     });
-    gulp.watch( './static/scss/**/*.scss', style );
-    gulp.watch( './templates/**/*.html' )
+    gulp.watch( './static/scss/*.scss', style );
+    gulp.watch( './templates/*.html' )
         .on( 'change', browserSync.reload );
-    gulp.watch( './static/js/**/*.js' )
+    gulp.watch( './static/js/*.js' )
         .on( 'change', browserSync.reload );
 }
 
