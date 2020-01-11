@@ -1,0 +1,35 @@
+// Overall styles ===========================================
+
+* {
+    box-sizing: border-box;
+    outline: none;
+}
+
+body {
+    // @include background-gradient();
+
+    padding: 0;
+    margin: 10vh 0 0 0;
+    overflow-x: hidden;
+    font-family: sans-serif;
+    background-color: $body-background;
+}
+
+h6 {
+    display: none;
+}
+
+img {
+    display: block;
+    border: 0;
+}
+
+a {
+    @include link-font();
+
+    display: block;
+    text-decoration: none;
+    outline: none;
+}
+
+// Overall styles ===========================================

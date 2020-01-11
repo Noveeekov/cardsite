@@ -1,0 +1,201 @@
+// Screens ==================================================
+
+$small-screen-max: 575px;
+$medium-screen-max: 767px;
+$large-screen-max: 991px;
+$largest-screen-max: 1199px;
+
+// Screens ==================================================
+
+// Colors ===================================================
+
+/* Color Theme Swatches in RGBA */
+$My-Color-Theme-1-rgba: transparent;
+$My-Color-Theme-2-rgba: rgba(113, 81, 219, 1);
+$My-Color-Theme-3-rgba: rgb(128, 30, 167);
+$My-Color-Theme-4-rgba: rgba(59, 219, 158, 1);
+$My-Color-Theme-5-rgba: rgba(145, 255, 102, 1);
+
+$color-white: rgba(255, 255, 255, 1);
+$color-black: rgba(0, 0, 0, 1);
+$color-blue: rgb(23, 145, 241); // #1791f1
+$color-dark-blue: rgb(42, 101, 146);
+$color-light-blue: rgb(152, 186, 212);
+$color-gray: rgb(51, 51, 51); // #333
+$color-orange: rgb(216, 106, 63);
+$color-cyan: hsl(192, 77%, 24%);
+
+$light-color: rgb(236, 239, 241);
+$dark-color: rgb(38, 50, 56);
+
+// title text
+$title-color: $color-blue;
+$title-background-color: $title-color;
+$title-text: $color-white;
+$title-cut-text: $title-color;
+$title-text-shadow: rgba(0, 0, 0, .3);
+$title-outline: rgba(0, 0, 0, .5);
+
+$body-background: hsl(218, 80%, 46%);
+$body-background_1: rgb(96, 108, 128);
+$article-background: $My-Color-Theme-1-rgba;
+
+$text-dark-background: $dark-color;
+$text-dark-color: $dark-color;
+$text-light-color: $light-color;
+
+$title-gradient: rgba(224, 224, 224, 0.212);
+$title-gradient_1: rgba(224, 224, 224, 0.37);
+$title-gradient_2: rgba(255, 255, 255, 0);
+
+// canvas
+$canvas-background: hsl(0, 0%, 100%);
+
+$side-background: rgba(0, 255, 255, 0.6);
+
+$template-border: #f0f2eb;
+$template-title-background: rgba(38, 38, 38, 1);
+$template-title-border: rgb(242, 109, 133);
+$template-color: rgba(165, 144, 117, 1);
+$template-shadow: rgba(165, 144, 117, 1);
+
+$left-nav-color: rgba(190, 190, 190, 0.801);
+$nav-active: rgb(158, 119, 96);
+
+$shadow-color: $color-black;
+
+// text section
+$about-text-color: rgb(30, 128, 173);
+
+// burger button
+$color-cyan-background: hsl(192, 77%, 24%);
+
+// projects
+$templates-background: gray;
+$backface-color: green;
+
+// Colors ===================================================
+
+// Numbers ==================================================
+
+// title text
+$title-shadow-scale: 1.1;
+$title-skew: -10deg;
+$title-skew-hover: -35deg;
+$title-shadow-skew: ($title-skew / 2) * -1;
+$title-shadow-skew-hover: ($title-skew-hover / 2) * -1;
+
+// animate title text
+// duration
+$ttl-txt-animation-duration: 1s;
+$ttl-txt-animation_1-duration: $ttl-txt-animation-duration;
+$ttl-txt-animation_2-duration: ($ttl-txt-animation-duration / 10) + $ttl-txt-animation-duration;
+$ttl-txt-animation_3-duration: ($ttl-txt-animation-duration * 4 / 10) + $ttl-txt-animation-duration;
+$ttl-txt-animation_4-duration: $ttl-txt-animation-duration;
+$ttl-txt-animation_5-duration: ($ttl-txt-animation-duration * 8 / 10) + $ttl-txt-animation-duration;
+$ttl-txt-animation_6-duration: ($ttl-txt-animation-duration * 3 / 10) + $ttl-txt-animation-duration;
+$ttl-txt-animation_7-duration: ($ttl-txt-animation-duration * 5 / 10) + $ttl-txt-animation-duration;
+$ttl-txt-animation_8-duration: $ttl-txt-animation-duration;
+// delay
+$ttl-txt-animation-delay: 1s;
+$ttl-txt-animation_1-delay: $ttl-txt-animation-delay;
+$ttl-txt-animation_2-delay: ($ttl-txt-animation-delay * 6 / 10) + $ttl-txt-animation-delay;
+$ttl-txt-animation_3-delay: ($ttl-txt-animation-delay * 4 / 10) + $ttl-txt-animation-delay;
+$ttl-txt-animation_4-delay: ($ttl-txt-animation-delay * 8 / 10) + $ttl-txt-animation-delay;
+$ttl-txt-animation_5-delay: ($ttl-txt-animation-delay * 2 / 10) + $ttl-txt-animation-delay;
+$ttl-txt-animation_6-delay: ($ttl-txt-animation-delay * 5 / 10) + $ttl-txt-animation-delay;
+$ttl-txt-animation_7-delay: ($ttl-txt-animation-delay * 8 / 10) + $ttl-txt-animation-delay;
+$ttl-txt-animation_8-delay: ($ttl-txt-animation-delay * 3 / 10) + $ttl-txt-animation-delay;
+
+// burger button
+$vertical-distance: 16px;
+$all-transition-and-delay: .3s;
+$angle-rotate-layers: 45deg;
+
+// projects
+$transition-opacity: .6s;
+$transition-rotate: 1s;
+
+// Numbers ==================================================
+
+// Mixins ===================================================
+
+@mixin title-font {
+    // font-family: 'Vast Shadow', cursive;
+    // font-family: 'Faster One', cursive;
+    // font-family: 'IM Fell DW Pica', serif;
+    // font-family: 'Akronim', cursive;
+    // font-family: 'Fascinate Inline', cursive;
+    // font-family: 'Audiowide', cursive;
+
+    // font-family: 'Press Start 2P', cursive;
+    // font-family: 'VT323', monospace;
+    // font-family: 'Aclonica', sans-serif;
+    // font-family: 'Fredericka the Great', cursive;
+    // font-family: 'Cabin Sketch', cursive;
+
+    // font-family: 'Dancing Script', cursive;
+    // font-family: 'Permanent Marker', cursive;
+    // font-family: 'Satisfy', cursive;
+    // font-family: 'Vibes', cursive;
+    // font-family: 'Sacramento', cursive;
+    // font-family: 'Luckiest Guy', cursive;
+
+    // font-family: 'Monoton', cursive;
+    font-family: 'Montserrat', sans-serif;
+
+    // font-family: 'Fredoka One', cursive;
+    // font-family: 'Special Elite', cursive;
+}
+
+@mixin link-font {
+    font-family: 'Montserrat', sans-serif;
+}
+
+@mixin font-canvas {
+    font-family: 'Montserrat', sans-serif;
+
+    //font-family: 'Vast Shadow', cursive;
+    // font-family: 'Faster One', cursive;
+    // font-family: 'IM Fell DW Pica', serif;
+    // font-family: 'Akronim', cursive;
+    // font-family: 'Fascinate Inline', cursive;
+
+    // font-family: 'Press Start 2P', cursive;
+    // font-family: 'VT323', monospace;
+    // font-family: 'Aclonica', sans-serif;
+    // font-family: 'Fredericka the Great', cursive;
+    // font-family: 'Cabin Sketch', cursive;
+    // font-family: 'Special Elite', cursive;
+
+    // font-family: 'Dancing Script', cursive;
+    // font-family: 'Permanent Marker', cursive;
+    // font-family: 'Satisfy', cursive;
+    // font-family: 'Vibes', cursive;
+    // font-family: 'Sacramento', cursive;
+    // font-family: 'Luckiest Guy', cursive;
+
+    // font-family: 'Fredoka One', cursive;
+}
+
+@mixin background-gradient {
+    // background: rgb(142, 191, 173);
+    // background: -moz-linear-gradient(90deg, rgba(142, 191, 173, 1) 0%, rgba(196, 255, 233, 1) 100%);
+    // background: -webkit-linear-gradient(90deg, rgba(142, 191, 173, 1) 0%, rgba(196, 255, 233, 1) 100%);
+    // background: linear-gradient(90deg, rgba(142, 191, 173, 1) 0%, rgba(196, 255, 233, 1) 100%);
+    // filter: progid:dximagetransform.microsoft.gradient(startColorstr="#8ebfad", endColorstr="#c4ffe9", GradientType=1);
+
+    // background: rgb(84, 65, 255);
+    // background: linear-gradient(180deg, rgba(84, 65, 255, 1) 0%, rgba(217, 104, 199, 1) 50%, rgba(226, 222, 88, 1) 100%);
+
+    // background: $color-dark-blue;
+    // background: linear-gradient(90deg, $color-dark-blue 0%, $color-light-blue 100%);
+
+    background: hsl(0, 0%, 100%);
+    background: -moz-linear-gradient(135deg, hsl(0, 0%, 100%) 0%, hsl(213, 84%, 47%) 100%);
+    background: -webkit-linear-gradient(135deg, hsl(0, 0%, 100%) 0%, hsl(213, 84%, 47%) 100%);
+    background: linear-gradient(135deg, hsl(0, 0%, 100%) 0%, hsl(213, 84%, 47%) 100%);
+    filter: progid:dximagetransform.microsoft.gradient(startColorstr="#ffffff", endColorstr="#136fdd", GradientType=1);
+}
+
+// Mixins ===================================================

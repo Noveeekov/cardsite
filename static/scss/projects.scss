@@ -1,0 +1,93 @@
+// Post =====================================================
+
+.templates {
+    position: fixed;
+    top: 100px;
+    left: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 1000px;
+    height: 500px;
+    overflow: hidden;
+    background-color: $templates-background;
+    border-radius: 8px;
+    opacity: 0;
+    -webkit-transition: opacity $transition-opacity;
+    -moz-transition: opacity $transition-opacity;
+    -ms-transition: opacity $transition-opacity;
+    -o-transition: opacity $transition-opacity;
+    transition: opacity $transition-opacity;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    transform: translateX(-50%);
+
+    // Template block
+    .landings {
+        position: relative;
+        width: calc(100% / 3);
+        height: 400px;
+        overflow: hidden;
+        border-radius: 8px;
+
+        div {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 100%;
+            perspective: 1000;
+
+            a,
+            a img,
+            .backface {
+                width: inherit;
+                height: inherit;
+            }
+
+            a img,
+            .backface {
+                backface-visibility: hidden;
+                border-radius: 8px;
+                -webkit-transition: $transition-rotate;
+                -moz-transition: $transition-rotate;
+                -ms-transition: $transition-rotate;
+                -o-transition: $transition-rotate;
+                transition: $transition-rotate;
+            }
+
+            .backface {
+                background-color: $backface-color;
+            }
+
+            a img {
+                -webkit-transform: rotateY(180deg);
+                -moz-transform: rotateY(180deg);
+                -ms-transform: rotateY(180deg);
+                -o-transform: rotateY(180deg);
+                transform: rotateY(180deg);
+            }
+
+            &:hover {
+                .backface {
+                    -webkit-transform: rotateY(180deg);
+                    -moz-transform: rotateY(180deg);
+                    -ms-transform: rotateY(180deg);
+                    -o-transform: rotateY(180deg);
+                    transform: rotateY(180deg);
+                }
+
+                img {
+                    -webkit-transform: rotateY(0);
+                    -moz-transform: rotateY(0);
+                    -ms-transform: rotateY(0);
+                    -o-transform: rotateY(0);
+                    transform: rotateY(0);
+                }
+            }
+        }
+    }
+}
+
+// Post =====================================================

@@ -6,7 +6,7 @@ const
 
 function style () {
     return gulp.src([
-        './static/scss/*.scss',
+        './static/scss/style.scss',
         '!./static/scss/normalize.scss'
     ])
           .pipe( gulpStylelint({
