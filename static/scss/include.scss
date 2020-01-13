@@ -67,6 +67,11 @@ $shadow-color: $color-black;
 // text section
 $about-text-color: rgb(30, 128, 173);
 
+// pulse button
+$static-border-color: hsl(27, 100%, 47%);
+$before-border-color: hsl(212, 74%, 44%);
+$after-border-color: hsl(17, 98%, 53%);
+
 // burger button
 $color-cyan-background: hsl(192, 77%, 24%);
 
@@ -115,6 +120,7 @@ $angle-rotate-layers: 45deg;
 // projects
 $transition-opacity: .6s;
 $transition-rotate: 1s;
+$about-blur: 10px;
 
 // Numbers ==================================================
 
@@ -176,6 +182,10 @@ $transition-rotate: 1s;
     // font-family: 'Luckiest Guy', cursive;
 
     // font-family: 'Fredoka One', cursive;
+}
+
+@mixin projects-font {
+    font-family: 'Montserrat', sans-serif;
 }
 
 @mixin background-gradient {

@@ -4,7 +4,7 @@
     position: fixed;
     top: 100px;
     left: 50%;
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: space-around;
     width: 1000px;
@@ -12,7 +12,8 @@
     overflow: hidden;
     background-color: $templates-background;
     border-radius: 8px;
-    opacity: 0;
+    box-shadow: 1px 1px 3px $shadow-color;
+    opacity: 1;
     -webkit-transition: opacity $transition-opacity;
     -moz-transition: opacity $transition-opacity;
     -ms-transition: opacity $transition-opacity;
@@ -48,6 +49,8 @@
 
             a img,
             .backface {
+                @include projects-font();
+
                 backface-visibility: hidden;
                 border-radius: 8px;
                 -webkit-transition: $transition-rotate;
@@ -58,7 +61,12 @@
             }
 
             .backface {
+                text-align: center;
                 background-color: $backface-color;
+
+                p {
+                    padding: 50px;
+                }
             }
 
             a img {

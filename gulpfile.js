@@ -5,6 +5,8 @@ const
     gulpStylelint = require( 'gulp-stylelint' );
 
 function style () {
+    'use strict';
+
     return gulp.src([
         './static/scss/style.scss',
         '!./static/scss/normalize.scss'
@@ -27,6 +29,8 @@ function style () {
 }
 
 function watch () {
+    'use strict';
+
     browserSync.init({
         open: false,
         server: {

@@ -195,4 +195,10 @@
     }
 }
 
+// free
+.blur-background {
+    -webkit-filter: blur($about-blur);
+    filter: blur($about-blur);
+}
+
 // Presentation =============================================

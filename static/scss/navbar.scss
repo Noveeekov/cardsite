@@ -2,7 +2,7 @@
 
 .menu-nav {
     position: fixed;
-    bottom: 50px;
+    bottom: 100px;
     left: 30px;
     z-index: 99;
     display: flex;
@@ -22,79 +22,3 @@
 }
 
 // Navbar ===================================================
-
-// Hamburger ================================================
-
-.hamburger {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100px;
-    height: 100px;
-    border: 1px solid purple;
-    // transform: translate(-50%, -50%);
-
-    label {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-    }
-
-    [type="checkbox"] {
-        display: none;
-    }
-}
-
-.open,
-.close,
-.open::before,
-.open::after {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 48px;
-    height: 2px;
-    margin-top: -1px;
-    margin-left: -24px;
-    background-color: white;
-    border-radius: 2px;
-}
-
-.open,
-.close {
-    display: none;
-    transition: transform $all-transition-and-delay;
-}
-
-.open::before,
-.open::after {
-    content: '';
-    transition: visibility $all-transition-and-delay $all-transition-and-delay, transform $all-transition-and-delay linear $all-transition-and-delay;
-}
-
-.open::before {
-    transform: translateY($vertical-distance);
-}
-
-.open::after {
-    transform: translateY(-$vertical-distance);
-}
-
-#switch:checked ~ .open {
-    transition: transform $all-transition-and-delay $all-transition-and-delay;
-    transform: rotateZ(-$angle-rotate-layers);
-}
-
-#switch:checked ~ .open::before,
-#switch:checked ~ .open::after {
-    visibility: hidden;
-    transition: visibility $all-transition-and-delay, transform $all-transition-and-delay linear;
-    transform: translateY(0);
-}
-
-#switch:checked ~ .close {
-    transition: transform $all-transition-and-delay linear $all-transition-and-delay;
-    transform: rotateZ($angle-rotate-layers);
-}
-
-// Hamburger ================================================

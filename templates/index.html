@@ -5,21 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Title page</title>
-    {% load static %}
+    <!-- {% load static %}
     <link rel="shortcut icon" href="{% static 'image/icons/H.svg' %}" type="image/svg">
     <link rel="shortcut icon" href="{% static 'image/icons/H.png' %}" type="image/png">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,400i,700%7CAkronim%7CFascinate+Inline%7CFaster+One%7CIM+Fell+DW+Pica%7CVast+Shadow%7CAudiowide%7CAclonica%7CCabin+Sketch:400,700%7CFredericka+the+Great%7CPress+Start+2P%7CVT323%7CMonoton%7CLuckiest+Guy%7CFredoka+One%7CMontserrat+Subrayada%7CDancing+Script%7CPermanent+Marker%7CSacramento%7CSatisfy%7CSpecial+Elite%7CVibes&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{% static 'css/normalize.min.css' %}" type="text/css">
-    <!-- <link rel="stylesheet" href="../static/lib/fontawesome/css/all.min.css"> -->
+    <link rel="stylesheet" href="../static/lib/fontawesome/css/all.min.css">
     <link rel="stylesheet" href="{% static 'css/lib/animate.css' %}" type="text/css">
-    <link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css"> -->
 
-    <!-- <link rel="shortcut icon" href="../static/image/icons/H.svg" type="image/svg">
-    <link rel="shortcut icon" href="../static/image/icons/H.png" type="image/png"> -->
-    <!-- <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,400i,700%7CAkronim%7CFascinate+Inline%7CFaster+One%7CIM+Fell+DW+Pica%7CVast+Shadow%7CAudiowide%7CAclonica%7CCabin+Sketch:400,700%7CFredericka+the+Great%7CPress+Start+2P%7CVT323%7CMonoton%7CLuckiest+Guy%7CFredoka+One%7CMontserrat+Subrayada%7CDancing+Script%7CPermanent+Marker%7CSacramento%7CSatisfy%7CSpecial+Elite%7CVibes&display=swap" rel="stylesheet"> -->
-    <!-- <link rel="stylesheet" href="../static/css/normalize.min.css" type="text/css"> -->
-    <!-- <link rel="stylesheet" href="../static/lib/fontawesome/css/all.min.css"> -->
-    <!-- <link rel="stylesheet" href="../static/css/lib/animate.css" type="text/css">
-    <link rel="stylesheet" href="../static/css/style.css" type="text/css"> -->
+    <link rel="shortcut icon" href="../static/image/icons/H.svg" type="image/svg">
+    <link rel="shortcut icon" href="../static/image/icons/H.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,400i,700%7CAkronim%7CFascinate+Inline%7CFaster+One%7CIM+Fell+DW+Pica%7CVast+Shadow%7CAudiowide%7CAclonica%7CCabin+Sketch:400,700%7CFredericka+the+Great%7CPress+Start+2P%7CVT323%7CMonoton%7CLuckiest+Guy%7CFredoka+One%7CMontserrat+Subrayada%7CDancing+Script%7CPermanent+Marker%7CSacramento%7CSatisfy%7CSpecial+Elite%7CVibes&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../static/css/normalize.min.css" type="text/css">
+    <link rel="stylesheet" href="../static/lib/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="../static/css/lib/animate.css" type="text/css">
+    <link rel="stylesheet" href="../static/css/style.css" type="text/css">
     
     <!--[if lt IE 9]>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
@@ -33,12 +34,12 @@
 <!-- Preload -->
 <!-- Navbar -->
     <nav class="menu-nav">
-        <div class="hamburger">
+        <div class="pulse"> <!-- hamburger -->
             <input type="checkbox" id="switch">
-            <div class="open"></div>
-            <div class="close"></div>
+            <div class="phone"><i class="fas fa-book-open phn"></i></div> <!-- open -->
+            <div class="text"></div> <!-- close -->
             <label for="switch" id="switchBtn">
-                <img src="../static/image/icons/corporal.svg" alt="">
+                <!-- <img src="../static/image/icons/corporal.svg" alt=""> -->
             </label>
         </div>
     </nav>
@@ -144,7 +145,8 @@
             <h6>Landing</h6>
             <div>
                 <div class="backface">
-                    <p>landing_1</p>
+                    <h3>landing_1</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fuga nobis odit laudantium labore fugit aperiam est aliquid doloribus libero numquam soluta quod eaque tempore consectetur, placeat, odio voluptatem ducimus pariatur?</p>
                 </div>
                 <a href="landing1" title="landing1" target="blank">
                     <img src="../static/image/index/landing-template1.png" alt="">
@@ -156,7 +158,10 @@
             <h6>Landing</h6>
             <div>
                 <div class="backface">
-                    <p>landing</p>
+                    <h3>landing</h3>
+                    <p>
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus doloremque explicabo deleniti. Vel, aut. Sit, illo porro. Velit dolorum vel repudiandae! Distinctio quis id minus accusantium eligendi magni aperiam amet?
+                    </p>
                 </div>
                 <a href="landing" title="landing" target="blank">
                     <img src="../static/image/index/landing-template.png" alt="">
@@ -172,7 +177,7 @@
     </noscript>
 <!-- EnableJS -->
 <!-- Scripts -->
-    <script src="{% static 'js/loading.js' %}" defer></script>
+    <!-- <script src="{% static 'js/loading.js' %}" defer></script>
     <script src="{% static 'js/navigation.js'%}" defer></script>
     <script src="{% static 'js/lib/jquery.min.js' %}" defer></script>
     <script src="{% static 'js/lib/particles.min.js' %}" defer></script>
@@ -181,9 +186,9 @@
     <script src="{% static 'js/lib/effects.js' %}" defer></script>
     <script src="{% static 'js/moveText.js' %}" defer></script>
     <script src="{% static 'js/lib/wow.min.js' %}" defer></script>
-    <script src="{% static 'js/wowInit.js' %}" defer></script>
+    <script src="{% static 'js/wowInit.js' %}" defer></script> -->
 
-    <!-- <script src="../static/js/loading.js" defer></script>
+    <script src="../static/js/loading.js" defer></script>
     <script src="../static/js/navigation.js" defer></script>
     <script src="../static/js/lib/jquery.min.js" defer></script>
     <script src="../static/js/lib/particles.min.js" defer></script>
@@ -192,7 +197,7 @@
     <script src="../static/js/lib/effects.js" defer></script>
     <script src="../static/js/moveText.js" defer></script>
     <script src="../static/js/lib/wow.min.js" defer></script>
-    <script src="../static/js/wowInit.js" defer></script> -->
+    <script src="../static/js/wowInit.js" defer></script>
 <!-- Scripts -->
 </body>
 </html>

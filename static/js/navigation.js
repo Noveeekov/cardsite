@@ -3,6 +3,7 @@ let title = document.querySelector( '.title' ),
     navBar = document.querySelector( '.menu-nav' ),
     titleTxt = document.querySelector( '.title-text' ),
     projects = document.querySelector('.templates'),
+    blurSection = document.querySelector('.about'),
     menuBtn = document.getElementById('switchBtn'),
     menuCbx = document.getElementById('switch'),
     direction = 0;
@@ -37,9 +38,11 @@ let resetY = function () {
 let viewProjects = function () {
     if(direction === -90) {
         if(menuCbx.checked) {
-            projects.style.opacity = '';
+            projects.style.display = '';
+            blurSection.classList.remove('blur-background');
         } else {
-            projects.style.opacity = '1';
+            projects.style.display = 'flex';
+            blurSection.classList.add('blur-background');
         }
     }
 };
