@@ -10,7 +10,7 @@
     width: 1000px;
     height: 500px;
     overflow: hidden;
-    background-color: $templates-background;
+    background-color: $templates-background-color;
     border-radius: 8px;
     box-shadow: 1px 1px 3px $shadow-color;
     opacity: 1;
@@ -30,7 +30,6 @@
         position: relative;
         width: calc(100% / 3);
         height: 400px;
-        overflow: hidden;
         border-radius: 8px;
 
         div {
@@ -53,6 +52,7 @@
 
                 backface-visibility: hidden;
                 border-radius: 8px;
+                box-shadow: 1px 1px 3px $shadow-color;
                 -webkit-transition: $transition-rotate;
                 -moz-transition: $transition-rotate;
                 -ms-transition: $transition-rotate;
@@ -62,7 +62,8 @@
 
             .backface {
                 text-align: center;
-                background-color: $backface-color;
+                background-color: $backface-background-color;
+                // border: 2px solid $backface-border-color;
 
                 p {
                     padding: 50px;

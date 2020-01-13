@@ -76,8 +76,9 @@ $after-border-color: hsl(17, 98%, 53%);
 $color-cyan-background: hsl(192, 77%, 24%);
 
 // projects
-$templates-background: gray;
-$backface-color: green;
+$templates-background-color: hsla(206, 89%, 52%, .8);
+$backface-background-color: hsla(206, 89%, 52%, 1);
+$backface-border-color: hsl(219, 65%, 38%);
 
 // Colors ===================================================
 

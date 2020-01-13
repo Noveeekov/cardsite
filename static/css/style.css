@@ -905,7 +905,7 @@ noscript {
     width: 1000px;
     height: 500px;
     overflow: hidden;
-    background-color: gray;
+    background-color: rgba(24, 147, 242, 0.8);
     border-radius: 8px;
     box-shadow: 1px 1px 3px black;
     opacity: 1;
@@ -925,7 +925,6 @@ noscript {
     position: relative;
     width: calc(100% / 3);
     height: 400px;
-    overflow: hidden;
     border-radius: 8px;
 }
 
@@ -949,6 +948,7 @@ noscript {
     font-family: 'Montserrat', sans-serif;
     backface-visibility: hidden;
     border-radius: 8px;
+    box-shadow: 1px 1px 3px black;
     -webkit-transition: 1s;
     -moz-transition: 1s;
     -ms-transition: 1s;
@@ -958,7 +958,7 @@ noscript {
 
 .templates .landings div .backface {
     text-align: center;
-    background-color: green;
+    background-color: #1893f2;
 }
 
 .templates .landings div .backface p {
