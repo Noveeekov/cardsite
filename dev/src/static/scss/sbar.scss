@@ -1,0 +1,85 @@
+// Sidebar ==================================================
+
+.help-nav { // left navbar main block
+    position: fixed;
+    top: 100px;
+    left: 48px;
+    z-index: 3;
+    width: auto;
+    height: 300px;
+    color: $left-nav-color;
+
+    &::before { // vertical line
+        position: absolute;
+        top: 50%;
+        left: 0;
+        z-index: 2;
+        width: 2px;
+        height: 70%;
+        max-height: 750px;
+        content: '';
+        background-color: $left-nav-color;
+        opacity: .35;
+        transform: translateY(-50%);
+    }
+
+    ul { // list navigation
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        width: auto;
+        height: 100%;
+        padding: 0;
+        margin: 0;
+        font-size: 6px;
+        list-style-position: inside;
+
+        li { // navigation element
+            position: relative;
+
+            &::before { // nav element number
+                position: absolute;
+                top: -5px;
+                left: 8px;
+                font-size: 14px;
+            }
+
+            &:nth-child(1)::before { // item home
+                content: '01';
+            }
+
+            &:nth-child(2)::before { // item projects
+                content: '02';
+            }
+
+            span { // nav element text
+                position: absolute;
+                top: -5px;
+                display: none;
+                font-size: 14px;
+            }
+        }
+
+        .nav-active { // free class
+            color: $nav-active;
+
+            &::before,
+            span {
+                color: $nav-color;
+            }
+
+            &::before {
+                left: -24px;
+            }
+
+            span {
+                display: inline;
+            }
+        }
+    }
+}
+
+// Sidebar ==================================================

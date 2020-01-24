@@ -1,0 +1,99 @@
+// <!-- Cube -->
+//     <!-- <div class="cube-wrapper">
+//         <div class="cube">
+//             <div class="side top">top</div>
+//             <div class="side right">right</div>
+//             <div class="side bottom">bottom</div>
+//             <div class="side left">left</div>
+//             <div class="side front">front</div>
+//             <div class="side back">back</div>
+//         </div>
+//     </div> -->
+// <!-- Cube -->
+
+// Cube =====================================================
+
+.cube-wrapper {
+    perspective: 1000px;
+
+    .cube {
+        position: relative;
+        width: 300px;
+        height: 300px;
+        margin: 0 auto;
+        -webkit-transform-style: preserve-3d;
+        -moz-transform-style: preserve-3d;
+        -ms-transform-style: preserve-3d;
+        -o-transform-style: preserve-3d;
+        transform-style: preserve-3d;
+
+        .side {
+            position: absolute;
+            width: inherit;
+            height: inherit;
+            color: white;
+            // background-color: $side-background;
+            // background-image: url('../image/icons/alien-stare.svg');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+            border: 1px solid white;
+            -webkit-transition: transform 3s;
+            -moz-transition: transform 3s;
+            -ms-transition: transform 3s;
+            -o-transition: transform 3s;
+            transition: transform 3s;
+        }
+
+        .top {
+            -webkit-transform: rotateX(90deg) translateZ(150px);
+            -moz-transform: rotateX(90deg) translateZ(150px);
+            -ms-transform: rotateX(90deg) translateZ(150px);
+            -o-transform: rotateX(90deg) translateZ(150px);
+            transform: rotateX(90deg) translateZ(150px);
+        }
+
+        .right {
+            -webkit-transform: rotateY(-90deg) translateZ(-150px);
+            -moz-transform: rotateY(-90deg) translateZ(-150px);
+            -ms-transform: rotateY(-90deg) translateZ(-150px);
+            -o-transform: rotateY(-90deg) translateZ(-150px);
+            transform: rotateY(-90deg) translateZ(-150px);
+        }
+
+        .bottom {
+            -webkit-transform: rotateX(-90deg) translateZ(150px);
+            -moz-transform: rotateX(-90deg) translateZ(150px);
+            -ms-transform: rotateX(-90deg) translateZ(150px);
+            -o-transform: rotateX(-90deg) translateZ(150px);
+            transform: rotateX(-90deg) translateZ(150px);
+        }
+
+        .left {
+            -webkit-transform: rotateY(90deg) translateZ(-150px);
+            -moz-transform: rotateY(90deg) translateZ(-150px);
+            -ms-transform: rotateY(90deg) translateZ(-150px);
+            -o-transform: rotateY(90deg) translateZ(-150px);
+            transform: rotateY(90deg) translateZ(-150px);
+        }
+
+        .front {
+            background-image: url('../image/icons/alien-stare.svg');
+            -webkit-transform: translateZ(150px);
+            -moz-transform: translateZ(150px);
+            -ms-transform: translateZ(150px);
+            -o-transform: translateZ(150px);
+            transform: translateZ(150px);
+        }
+
+        .back {
+            -webkit-transform: rotateX(180deg) translateZ(150px);
+            -moz-transform: rotateX(180deg) translateZ(150px);
+            -ms-transform: rotateX(180deg) translateZ(150px);
+            -o-transform: rotateX(180deg) translateZ(150px);
+            transform: rotateX(180deg) translateZ(150px);
+        }
+    }
+}
+
+// Cube =====================================================

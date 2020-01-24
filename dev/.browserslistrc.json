@@ -1,0 +1,4 @@
+{
+    "browsers": ["last 8 versions"],
+    "cascade": true
+}
