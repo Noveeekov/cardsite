@@ -2,14 +2,14 @@
 
 .templates {
     position: fixed;
-    top: 100px;
+    top: 50%;
     left: 50%;
     display: none;
     align-items: center;
     justify-content: space-around;
-    width: calc(100% - 10%);
+    width: 900px;
     height: 500px;
-    overflow: hidden;
+    overflow: auto;
     background-color: $templates-background-color;
     border-radius: 8px;
     box-shadow: 1px 1px 3px $shadow-color;
@@ -19,49 +19,83 @@
     -ms-transition: opacity $transition-opacity;
     -o-transition: opacity $transition-opacity;
     transition: opacity $transition-opacity;
-    -webkit-transform: translateX(-50%);
-    -moz-transform: translateX(-50%);
-    -ms-transform: translateX(-50%);
-    -o-transform: translateX(-50%);
-    transform: translateX(-50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
 
     @media screen and (max-width: $large-screen-max) {
         flex-direction: column;
+        justify-content: flex-start;
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
     }
 
     // Template block
     .landings {
         position: relative;
+        flex-shrink: 0;
         width: calc(100% / 3);
         height: 400px;
+        margin: 50px;
         border-radius: 8px;
 
-        div {
+        @media screen and (max-width: $large-screen-max) {
+            width: 90%;
+            height: 200px;
+            border-radius: 0;
+        }
+
+        & > a > div {
             position: absolute;
             bottom: 0;
             width: 100%;
             height: 100%;
             perspective: 1000;
 
-            a,
-            a img,
-            .backface {
-                width: inherit;
-                height: inherit;
+            @media screen and (max-width: $large-screen-max) {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                background-color: #fff;
             }
 
-            a img,
+            .template-image,
+            .template-image img,
+            .backface {
+                width: 100%;
+                height: 100%;
+
+                @media screen and (min-width: $large-screen-min) {
+                    position: absolute;
+                }
+            }
+
+            .template-image,
+            .backface {
+                @media screen and (max-width: $large-screen-max) {
+                    width: 50%;
+                }
+            }
+
+            .template-image img,
             .backface {
                 @include projects-font();
 
                 backface-visibility: hidden;
                 border-radius: 8px;
                 box-shadow: 1px 1px 3px $shadow-color;
-                -webkit-transition: $transition-rotate;
-                -moz-transition: $transition-rotate;
-                -ms-transition: $transition-rotate;
-                -o-transition: $transition-rotate;
+                // -webkit-transition: $transition-rotate;
+                // -moz-transition: $transition-rotate;
+                // -ms-transition: $transition-rotate;
+                // -o-transition: $transition-rotate;
                 transition: $transition-rotate;
+
+                @media screen and (max-width: $large-screen-max) {
+                    border-radius: 0;
+                }
             }
 
             .backface {
@@ -73,29 +107,42 @@
                 }
             }
 
-            a img {
-                -webkit-transform: rotateY(180deg);
-                -moz-transform: rotateY(180deg);
-                -ms-transform: rotateY(180deg);
-                -o-transform: rotateY(180deg);
-                transform: rotateY(180deg);
+            .template-image {
+                overflow: hidden;
             }
 
-            &:hover {
-                .backface {
-                    -webkit-transform: rotateY(180deg);
-                    -moz-transform: rotateY(180deg);
-                    -ms-transform: rotateY(180deg);
-                    -o-transform: rotateY(180deg);
+            .template-image img {
+                @media screen and (max-width: $large-screen-max) {
+                    height: auto;
+                    min-height: 200px;
+                }
+            }
+
+            @media screen and (min-width: $large-screen-min) {
+                .template-image img {
+                    // -webkit-transform: rotateY(180deg);
+                    // -moz-transform: rotateY(180deg);
+                    // -ms-transform: rotateY(180deg);
+                    // -o-transform: rotateY(180deg);
                     transform: rotateY(180deg);
                 }
 
-                img {
-                    -webkit-transform: rotateY(0);
-                    -moz-transform: rotateY(0);
-                    -ms-transform: rotateY(0);
-                    -o-transform: rotateY(0);
-                    transform: rotateY(0);
+                &:hover {
+                    .backface {
+                        // -webkit-transform: rotateY(180deg);
+                        // -moz-transform: rotateY(180deg);
+                        // -ms-transform: rotateY(180deg);
+                        // -o-transform: rotateY(180deg);
+                        transform: rotateY(180deg);
+                    }
+
+                    img {
+                        // -webkit-transform: rotateY(0);
+                        // -moz-transform: rotateY(0);
+                        // -ms-transform: rotateY(0);
+                        // -o-transform: rotateY(0);
+                        transform: rotateY(0);
+                    }
                 }
             }
         }

@@ -17,7 +17,7 @@
 </head>
 <body>
     <div class="window-load">
-        <img src="../static/image/icons/duration.svg" alt="">
+        <img src="../static/image/icons/duration.png" alt="">
     </div>
     <nav class="menu-nav">
         <div class="pulse"> 
@@ -41,8 +41,8 @@
             <li><span data-content="r">r</span></li>
         </ul>
         <div id="particles"></div>
-        <Button class="open-btn">
-            <img src="../static/image/icons/door-handle.svg" alt="">
+        <Button class="open-btn wow fadeIn" data-wow-delay="3s" data-wow-duration="2s">
+            <img src="../static/image/icons/arrow.png" alt="">
         </Button>
     </div>
     <main class="about">
@@ -168,28 +168,32 @@
         <h6>Projects</h6>
         <article class="landings landing-1">
             <h6>Landing</h6>
-            <div>
-                <div class="backface">
-                    <h3>Проэкт 2</h3>
-                    <p>Landing page</p>
+            <a href="landing1" title="landing1" target="blank">
+                <div>
+                    <div class="backface">
+                        <h3>Проэкт 2</h3>
+                        <p>Landing page</p>
+                    </div>
+                    <div class="template-image">
+                        <img src="../static/image/index/landing-template1.png" alt="">
+                    </div>
                 </div>
-                <a href="landing1" title="landing1" target="blank">
-                    <img src="../static/image/index/landing-template1.png" alt="">
-                </a>
-            </div>
+            </a>
         </article>
 
             <article class="landings landing">
             <h6>Landing</h6>
-            <div>
-                <div class="backface">
-                    <h3>Проэкт 1</h3>
-                    <p>Landing page</p>
+            <a href="landing" title="landing" target="blank">
+                <div>
+                    <div class="backface">
+                        <h3>Проэкт 1</h3>
+                        <p>Landing page</p>
+                    </div>
+                    <div class="template-image">
+                        <img src="../static/image/index/landing-template.png" alt="">
+                    </div>
                 </div>
-                <a href="landing" title="landing" target="blank">
-                    <img src="../static/image/index/landing-template.png" alt="">
-                </a>
-            </div>
+            </a>
         </article>
 
         </section>
@@ -197,8 +201,8 @@
         <p>Please enter java-script</p>
     </noscript>
     <script src="../static/js/loading.min.js" defer></script>
-    <script src="../static/js/navigation.min.js" defer></script>
     <script src="../static/js/jquery.min.js" defer></script>
+    <script src="../static/js/navigation.min.js" defer></script>
     <script src="../static/js/particles.min.js" defer></script>
     <script src="../static/js/particles_init.min.js" defer></script>
     <script src="../static/js/scene.min.js" defer></script>

@@ -6,6 +6,8 @@
 }
 
 body {
+    @include background-gradient();
+
     padding: 0;
     margin: 10vh 0 0 0;
     overflow-x: hidden;
