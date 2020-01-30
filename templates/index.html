@@ -2,49 +2,41 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
+    <meta name="theme-color" content="#1791f1">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="robots" content="index, follow, noodp">
+    <meta name="googlebot" content="index, follow">
+    <meta name="google" content="notranslate">
+    <meta name="format-detection" content="telephone=no">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Title page</title>
-    <!-- {% load static %}
-    <link rel="shortcut icon" href="{% static 'image/icons/H.svg' %}" type="image/svg">
-    <link rel="shortcut icon" href="{% static 'image/icons/H.png' %}" type="image/png">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,400i,700%7CAkronim%7CFascinate+Inline%7CFaster+One%7CIM+Fell+DW+Pica%7CVast+Shadow%7CAudiowide%7CAclonica%7CCabin+Sketch:400,700%7CFredericka+the+Great%7CPress+Start+2P%7CVT323%7CMonoton%7CLuckiest+Guy%7CFredoka+One%7CMontserrat+Subrayada%7CDancing+Script%7CPermanent+Marker%7CSacramento%7CSatisfy%7CSpecial+Elite%7CVibes&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="{% static 'css/normalize.min.css' %}" type="text/css">
-    <link rel="stylesheet" href="../static/lib/fontawesome/css/all.min.css">
-    <link rel="stylesheet" href="{% static 'css/lib/animate.css' %}" type="text/css">
-    <link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css"> -->
 
-    <link rel="shortcut icon" href="../static/image/icons/H.svg" type="image/svg">
-    <link rel="shortcut icon" href="../static/image/icons/H.png" type="image/png">
+    <link rel="shortcut icon" href="../static/image/icons/favicon.ico" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,400i,700%7CAkronim%7CFascinate+Inline%7CFaster+One%7CIM+Fell+DW+Pica%7CVast+Shadow%7CAudiowide%7CAclonica%7CCabin+Sketch:400,700%7CFredericka+the+Great%7CPress+Start+2P%7CVT323%7CMonoton%7CLuckiest+Guy%7CFredoka+One%7CMontserrat+Subrayada%7CDancing+Script%7CPermanent+Marker%7CSacramento%7CSatisfy%7CSpecial+Elite%7CVibes&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../static/css/normalize.min.css" type="text/css">
-    <link rel="stylesheet" href="../static/lib/fontawesome/css/all.min.css">
-    <link rel="stylesheet" href="../static/css/lib/animate.css" type="text/css">
-    <link rel="stylesheet" href="../static/css/style.css" type="text/css">
-    
-    <!--[if lt IE 9]>
+    <link rel="stylesheet" href="../static/css/animate.min.css" type="text/css">
+    <link rel="stylesheet" href="../static/css/style.min.css" type="text/css">
+
+<!--[if lt IE 9]>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
     <![endif]-->
 </head>
 <body>
-<!-- Preload -->
     <div class="window-load">
-        <img src="../static/image/icons/duration.svg" alt="">
+        <img src="../static/image/icons/duration.png" alt="">
     </div>
-<!-- Preload -->
-<!-- Navbar -->
     <nav class="menu-nav">
-        <div class="pulse"> <!-- hamburger -->
+        <div class="pulse"> 
             <input type="checkbox" id="switch">
-            <div class="phone"><i class="fas fa-book-open phn"></i></div> <!-- open -->
-            <div class="text"></div> <!-- close -->
+            <div class="phone">
+                <img src="../static/image/projects.svg" alt="" class="phn">
+            </div> 
+            <div class="text"></div> 
             <label for="switch" id="switchBtn"></label>
         </div>
     </nav>
-<!-- Navbar -->
-<!-- Title -->
     <div class="title">
-    <!-- Title text -->
         <ul class="title-text wow bounceInLeft" data-wow-delay="1s" data-wow-duration="2s">
             <li><span data-content="w">w</span></li>
             <li><span data-content="3">3</span></li>
@@ -55,34 +47,13 @@
             <li><span data-content="e">e</span></li>
             <li><span data-content="r">r</span></li>
         </ul>
-    <!-- Title text -->
-    <!-- Particles -->
         <div id="particles"></div>
-    <!-- Particles -->
-    <!-- Cube -->
-        <!-- <div class="cube-wrapper">
-            <div class="cube">
-                <div class="side top">top</div>
-                <div class="side right">right</div>
-                <div class="side bottom">bottom</div>
-                <div class="side left">left</div>
-                <div class="side front">front</div>
-                <div class="side back">back</div>
-            </div>
-        </div> -->
-    <!-- Cube -->
-    <!-- Button -->
-        <Button class="open-btn">
-            <img src="../static/image/icons/door-handle.svg" alt="">
+        <Button class="open-btn wow fadeIn" data-wow-delay="3s" data-wow-duration="2s">
+            <img src="../static/image/icons/arrow.png" alt="">
         </Button>
     </div>
-<!-- Title -->
-<!-- Presentation -->
     <main class="about">
-    <!-- Hidden title -->
         <h6>about</h6>
-    <!-- Hidden title -->
-    <!-- Canvas -->
         <div class="about-cvs">
             <div class="cvs-wrapper">
                 <div class="cvs-container">
@@ -101,8 +72,6 @@
                 </div>
             </div>
         </div>
-    <!-- Canvas -->
-    <!-- Text presentation -->
         <section class="about-txt">
             <h6>about</h6>
             <article>
@@ -127,7 +96,7 @@
                         Создание функционального, удобного и красивого интерфейса, отвечающего потребностям пользователя.
                         Продумывание каждой детали, с которой пользователь может взаимодействовать.
 
-                    </dd>
+                        </dd>
                     <dt>
                         HTML5, CSS3, JQUERY, CANVAS, SVG
                     </dt>
@@ -152,14 +121,14 @@
                     <dd>
                         Опыт создания HTML-страницы сайта на основе дизайн-макетов
 
-                    </dd>
+                        </dd>
                     <dt>
                         Адаптивная вёрстка
                     </dt>
                     <dd>
                         Создание отзывчивого интерфейса, при помощи которого пользователи могут получить досту к онлайн миру и наслаждатся им на своём портативном устройстве.
 
-                    </dd>
+                        </dd>
                     <dt>
                         Анимации
                     </dt>
@@ -178,7 +147,7 @@
                     <dd>
                         Знание языков программирования
 
-                    </dd>
+                        </dd>
                     <dt>
                         GIT
                     </dt>
@@ -191,7 +160,7 @@
                     <dd>
                         Навыки работы с базами данных
 
-                    </dd>
+                        </dd>
                     <dt>
                         DJANGO
                     </dt>
@@ -201,79 +170,54 @@
                 </dl>
             </article>
         </section>
-    <!-- Text presentation -->
     </main>
-<!-- Presentation -->
-<!-- Sidebar -->
-    <!-- <aside class="help-nav">
-        <ul>
-            <li class="page"><span>Home</span></li>
-            <li class="page"><span>Projects</span></li>
-        </ul>
-    </aside> -->
-<!-- Sidebar -->
-<!-- Templates -->
     <section class="templates">
         <h6>Projects</h6>
         <article class="landings landing-1">
             <h6>Landing</h6>
-            <div>
-                <div class="backface">
-                    <h3>Проэкт 2</h3>
-                    <p>Landing page</p>
+            <a href="landing1" title="landing1" target="blank">
+                <div>
+                    <div class="backface">
+                        <h3>Проэкт 2</h3>
+                        <p>Landing page</p>
+                    </div>
+                    <div class="template-image">
+                        <img src="../static/image/index/landing-template1.png" alt="">
+                    </div>
                 </div>
-                <a href="landing1" title="landing1" target="blank">
-                    <img src="../static/image/index/landing-template1.png" alt="">
-                </a>
-            </div>
+            </a>
         </article>
 
-        <article class="landings landing">
+            <article class="landings landing">
             <h6>Landing</h6>
-            <div>
-                <div class="backface">
-                    <h3>Проэкт 1</h3>
-                    <p>Landing page</p>
+            <a href="landing" title="landing" target="blank">
+                <div>
+                    <div class="backface">
+                        <h3>Проэкт 1</h3>
+                        <p>Landing page</p>
+                    </div>
+                    <div class="template-image">
+                        <img src="../static/image/index/landing-template.png" alt="">
+                    </div>
                 </div>
-                <a href="landing" title="landing" target="blank">
-                    <img src="../static/image/index/landing-template.png" alt="">
-                </a>
-            </div>
+            </a>
         </article>
 
-    </section>
-<!-- Templates -->
-<!-- EnableJS -->
+        </section>
     <noscript>
         <p>Please enter java-script</p>
     </noscript>
-<!-- EnableJS -->
-<!-- Scripts -->
-    <!-- <script src="{% static 'js/loading.js' %}" defer></script>
-    <script src="{% static 'js/navigation.js'%}" defer></script>
-    <script src="{% static 'js/lib/jquery.min.js' %}" defer></script>
-    <script src="{% static 'js/lib/particles.min.js' %}" defer></script>
-    <script src="{% static 'js/particles.js' %}" defer></script>
-    <script src="{% static 'js/lib/scene.js' %}" defer></script>
-    <script src="{% static 'js/lib/effects.js' %}" defer></script>
-    <script src="{% static 'js/moveText.js' %}" defer></script>
-    <script src="{% static 'js/lib/wow.min.js' %}" defer></script>
-    <script src="{% static 'js/wowInit.js' %}" defer></script>
-    <script src="{% static 'js/lib/nicescroll.min.js' %}" defer></script>
-    <script src="{% static 'js/scrollbar.js' %}" defer></script> -->
-
-    <script src="../static/js/loading.js" defer></script>
-    <script src="../static/js/navigation.js" defer></script>
-    <script src="../static/js/lib/jquery.min.js" defer></script>
-    <script src="../static/js/lib/particles.min.js" defer></script>
-    <script src="../static/js/particles.js" defer></script>
-    <script src="../static/js/lib/scene.js" defer></script>
-    <script src="../static/js/lib/effects.js" defer></script>
-    <script src="../static/js/moveText.js" defer></script>
-    <script src="../static/js/lib/wow.min.js" defer></script>
+    <script src="../static/js/loading.min.js" defer></script>
+    <script src="../static/js/jquery.min.js" defer></script>
+    <script src="../static/js/navigation.min.js" defer></script>
+    <script src="../static/js/particles.min.js" defer></script>
+    <script src="../static/js/particles_init.min.js" defer></script>
+    <script src="../static/js/scene.min.js" defer></script>
+    <script src="../static/js/effects.min.js" defer></script>
+    <script src="../static/js/moveText.min.js" defer></script>
+    <script src="../static/js/wow.min.js" defer></script>
+    <script src="../static/js/nicescroll.min.js" defer></script>
+    <script src="../static/js/scrollbar.min.js" defer></script>
     <script src="../static/js/wowInit.js" defer></script>
-    <script src="../static/js/lib/nicescroll.min.js" defer></script>
-    <script src="../static/js/scrollbar.js" defer></script>
-<!-- Scripts -->
 </body>
 </html>

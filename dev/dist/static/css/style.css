@@ -708,7 +708,7 @@ noscript {
     width: 100%;
     height: 100%;
     overflow: hidden;
-    background-color: #1791f1;
+    background-color: #1893f2;
     box-shadow: 2px 2px 3px black;
     -webkit-transition: -webkit-transform 1s;
     transition: -webkit-transform 1s;
@@ -778,8 +778,8 @@ noscript {
 
 .title-text li span::after {
     z-index: 2;
-    color: #1791f1;
-    text-shadow: -1px 0 1px #1791f1, 1px 0 1px rgba(0, 0, 0, 0.5);
+    color: #1893f2;
+    text-shadow: -1px 0 1px #1893f2, 1px 0 1px rgba(0, 0, 0, 0.5);
     -webkit-transform: rotateY(-10deg);
             transform: rotateY(-10deg);
 }

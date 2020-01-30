@@ -1,9 +1,9 @@
-let bcg = document.querySelector( '.title' ),
-    currentColor = [255, 255, 255],
-    currentStep = 0,
-    oldTime = 0,
-    steps = 100,
-    delta= 69;
+let bcg = document.querySelector( '.title' );
+let currentColor = [255, 255, 255];
+let currentStep = 0;
+let oldTime = 0;
+let steps = 100;
+let delta= 69;
 
 function getRandomColor () {
     'use strict';

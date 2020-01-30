@@ -1,5 +1,5 @@
 function onReady (callBack) {
-    'use strict';
+    "use strict";
 
     setTimeout(function() {
         document.querySelector('.window-load').style.display = 'none';
