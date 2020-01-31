@@ -19,11 +19,11 @@ version: 1.1.6
   Licensed under the Apache License, Version 2.0 (the "License"); you may not use
   this file except in compliance with the License. You may obtain a copy of the
   License at http://www.apache.org/licenses/LICENSE-2.0
-   THIS CODE IS PROVIDED ON AN *AS IS* BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+    THIS CODE IS PROVIDED ON AN *AS IS* BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
   KIND, EITHER EXPRESS OR IMPLIED, INCLUDING WITHOUT LIMITATION ANY IMPLIED
   WARRANTIES OR CONDITIONS OF TITLE, FITNESS FOR A PARTICULAR PURPOSE,
   MERCHANTABLITY OR NON-INFRINGEMENT.
-   See the Apache Version 2.0 License for specific language governing permissions
+    See the Apache Version 2.0 License for specific language governing permissions
   and limitations under the License.
   ***************************************************************************** */
 
@@ -350,7 +350,7 @@ version: 1.1.6
   * @memberof Color
   * @example
   import {RGB} from "@daybrush/utils";
-   console.log(RGB); // "rgb"
+    console.log(RGB); // "rgb"
   */
 
   var RGB = "rgb";
@@ -359,7 +359,7 @@ version: 1.1.6
   * @memberof Color
   * @example
   import {RGBA} from "@daybrush/utils";
-   console.log(RGBA); // "rgba"
+    console.log(RGBA); // "rgba"
   */
 
   var RGBA = "rgba";
@@ -368,7 +368,7 @@ version: 1.1.6
   * @memberof Color
   * @example
   import {HSL} from "@daybrush/utils";
-   console.log(HSL); // "hsl"
+    console.log(HSL); // "hsl"
   */
 
   var HSL = "hsl";
@@ -377,7 +377,7 @@ version: 1.1.6
   * @memberof Color
   * @example
   import {HSLA} from "@daybrush/utils";
-   console.log(HSLA); // "hsla"
+    console.log(HSLA); // "hsla"
   */
 
   var HSLA = "hsla";
@@ -386,7 +386,7 @@ version: 1.1.6
   * @memberof Color
   * @example
   import {COLOR_MODELS} from "@daybrush/utils";
-   console.log(COLOR_MODELS); // ["rgb", "rgba", "hsl", "hsla"];
+    console.log(COLOR_MODELS); // ["rgb", "rgba", "hsl", "hsla"];
   */
 
   var COLOR_MODELS = [RGB, RGBA, HSL, HSLA];
@@ -395,7 +395,7 @@ version: 1.1.6
   * @memberof Consts
   * @example
   import {FUNCTION} from "@daybrush/utils";
-   console.log(FUNCTION); // "function"
+    console.log(FUNCTION); // "function"
   */
 
   var FUNCTION = "function";
@@ -404,7 +404,7 @@ version: 1.1.6
   * @memberof Consts
   * @example
   import {PROPERTY} from "@daybrush/utils";
-   console.log(PROPERTY); // "property"
+    console.log(PROPERTY); // "property"
   */
 
   var PROPERTY = "property";
@@ -413,7 +413,7 @@ version: 1.1.6
   * @memberof Consts
   * @example
   import {ARRAY} from "@daybrush/utils";
-   console.log(ARRAY); // "array"
+    console.log(ARRAY); // "array"
   */
 
   var ARRAY = "array";
@@ -422,7 +422,7 @@ version: 1.1.6
   * @memberof Consts
   * @example
   import {OBJECT} from "@daybrush/utils";
-   console.log(OBJECT); // "object"
+    console.log(OBJECT); // "object"
   */
 
   var OBJECT = "object";
@@ -431,7 +431,7 @@ version: 1.1.6
   * @memberof Consts
   * @example
   import {STRING} from "@daybrush/utils";
-   console.log(STRING); // "string"
+    console.log(STRING); // "string"
   */
 
   var STRING = "string";
@@ -440,7 +440,7 @@ version: 1.1.6
   * @memberof Consts
   * @example
   import {NUMBER} from "@daybrush/utils";
-   console.log(NUMBER); // "number"
+    console.log(NUMBER); // "number"
   */
 
   var NUMBER = "number";
@@ -449,7 +449,7 @@ version: 1.1.6
   * @memberof Consts
   * @example
   import {UNDEFINED} from "@daybrush/utils";
-   console.log(UNDEFINED); // "undefined"
+    console.log(UNDEFINED); // "undefined"
   */
 
   var UNDEFINED = "undefined";
@@ -458,7 +458,7 @@ version: 1.1.6
   * @memberof Consts
   * @example
   import {IS_WINDOW} from "@daybrush/utils";
-   console.log(IS_WINDOW); // false in node.js
+    console.log(IS_WINDOW); // false in node.js
   console.log(IS_WINDOW); // true in browser
   */
 
@@ -469,7 +469,7 @@ version: 1.1.6
   * @name document
   * @example
   import {IS_WINDOW} from "@daybrush/utils";
-   console.log(IS_WINDOW); // false in node.js
+    console.log(IS_WINDOW); // false in node.js
   console.log(IS_WINDOW); // true in browser
   */
 
@@ -487,7 +487,7 @@ version: 1.1.6
   * @memberof CrossBrowser
   * @example
   import {getCrossBrowserProperty} from "@daybrush/utils";
-   console.log(getCrossBrowserProperty("transform")); // "transform", "-ms-transform", "-webkit-transform"
+    console.log(getCrossBrowserProperty("transform")); // "transform", "-ms-transform", "-webkit-transform"
   console.log(getCrossBrowserProperty("filter")); // "filter", "-webkit-filter"
   */
 
@@ -520,7 +520,7 @@ version: 1.1.6
   * @memberof CrossBrowser
   * @example
   import {TRANSFORM} from "@daybrush/utils";
-   console.log(TRANSFORM); // "transform", "-ms-transform", "-webkit-transform"
+    console.log(TRANSFORM); // "transform", "-ms-transform", "-webkit-transform"
   */
 
 
@@ -532,7 +532,7 @@ version: 1.1.6
   * @memberof CrossBrowser
   * @example
   import {FILTER} from "@daybrush/utils";
-   console.log(FILTER); // "filter", "-ms-filter", "-webkit-filter"
+    console.log(FILTER); // "filter", "-ms-filter", "-webkit-filter"
   */
 
   var FILTER =
@@ -543,7 +543,7 @@ version: 1.1.6
   * @memberof CrossBrowser
   * @example
   import {ANIMATION} from "@daybrush/utils";
-   console.log(ANIMATION); // "animation", "-ms-animation", "-webkit-animation"
+    console.log(ANIMATION); // "animation", "-ms-animation", "-webkit-animation"
   */
 
   var ANIMATION =
@@ -554,7 +554,7 @@ version: 1.1.6
   * @memberof CrossBrowser
   * @example
   import {KEYFRAMES} from "@daybrush/utils";
-   console.log(KEYFRAMES); // "keyframes", "-ms-keyframes", "-webkit-keyframes"
+    console.log(KEYFRAMES); // "keyframes", "-ms-keyframes", "-webkit-keyframes"
   */
 
   var KEYFRAMES =
@@ -574,7 +574,7 @@ version: 1.1.6
    * @param - The second number to base on the inner product
    * @return - Returns the inner product
   import { dot } from "@daybrush/utils";
-   console.log(dot(0, 15, 2, 3)); // 6
+    console.log(dot(0, 15, 2, 3)); // 6
   console.log(dot(5, 15, 2, 3)); // 9
   console.log(dot(5, 15, 1, 1)); // 10
    */
@@ -589,7 +589,7 @@ version: 1.1.6
   * @return {boolean} true if the type is correct, false otherwise
   * @example
   import {isUndefined} from "@daybrush/utils";
-   console.log(isUndefined(undefined)); // true
+    console.log(isUndefined(undefined)); // true
   console.log(isUndefined("")); // false
   console.log(isUndefined(1)); // false
   console.log(isUndefined(null)); // false
@@ -606,7 +606,7 @@ version: 1.1.6
   * @return {} true if the type is correct, false otherwise
   * @example
   import {isObject} from "@daybrush/utils";
-   console.log(isObject({})); // true
+    console.log(isObject({})); // true
   console.log(isObject(undefined)); // false
   console.log(isObject("")); // false
   console.log(isObject(null)); // false
@@ -623,7 +623,7 @@ version: 1.1.6
   * @return {} true if the type is correct, false otherwise
   * @example
   import {isArray} from "@daybrush/utils";
-   console.log(isArray([])); // true
+    console.log(isArray([])); // true
   console.log(isArray({})); // false
   console.log(isArray(undefined)); // false
   console.log(isArray(null)); // false
@@ -640,7 +640,7 @@ version: 1.1.6
   * @return {} true if the type is correct, false otherwise
   * @example
   import {isString} from "@daybrush/utils";
-   console.log(isString("1234")); // true
+    console.log(isString("1234")); // true
   console.log(isString(undefined)); // false
   console.log(isString(1)); // false
   console.log(isString(null)); // false
@@ -657,7 +657,7 @@ version: 1.1.6
   * @return {} true if the type is correct, false otherwise
   * @example
   import {isFunction} from "@daybrush/utils";
-   console.log(isFunction(function a() {})); // true
+    console.log(isFunction(function a() {})); // true
   console.log(isFunction(() => {})); // true
   console.log(isFunction("1234")); // false
   console.log(isFunction(1)); // false
@@ -675,7 +675,7 @@ version: 1.1.6
   * @return {Array} divided texts
   * @example
   import {spliceSpace} from "@daybrush/utils";
-   console.log(splitSpace("a b c d e f g"));
+    console.log(splitSpace("a b c d e f g"));
   // ["a", "b", "c", "d", "e", "f", "g"]
   console.log(splitSpace("'a,b' c 'd,e' f g"));
   // ["'a,b'", "c", "'d,e'", "f", "g"]
@@ -694,7 +694,7 @@ version: 1.1.6
   * @return {Array} divided texts
   * @example
   import {splitComma} from "@daybrush/utils";
-   console.log(splitComma("a,b,c,d,e,f,g"));
+    console.log(splitComma("a,b,c,d,e,f,g"));
   // ["a", "b", "c", "d", "e", "f", "g"]
   console.log(splitComma("'a,b',c,'d,e',f,g"));
   // ["'a,b'", "c", "'d,e'", "f", "g"]
@@ -716,7 +716,7 @@ version: 1.1.6
   * @return {object} divided texts
   * @example
   import {splitBracket} from "@daybrush/utils";
-   console.log(splitBracket("a(1, 2)"));
+    console.log(splitBracket("a(1, 2)"));
   // {prefix: "a", value: "1, 2", suffix: ""}
   console.log(splitBracket("a(1, 2)b"));
   // {prefix: "a", value: "1, 2", suffix: "b"}
@@ -743,7 +743,7 @@ version: 1.1.6
   * @return {} divided texts
   * @example
   import {splitUnit} from "@daybrush/utils";
-   console.log(splitUnit("10px"));
+    console.log(splitUnit("10px"));
   // {prefix: "", value: 10, unit: "px"}
   console.log(splitUnit("-10px"));
   // {prefix: "", value: -10, unit: "px"}
@@ -779,7 +779,7 @@ version: 1.1.6
   * @return {String} camel-case string
   * @example
   import {camelize} from "@daybrush/utils";
-   console.log(camelize("transform-origin")); // transformOrigin
+    console.log(camelize("transform-origin")); // transformOrigin
   console.log(camelize("abcd_efg")); // abcdEfg
   console.log(camelize("abcd efg")); // abcdEfg
   */
@@ -798,7 +798,7 @@ version: 1.1.6
   * @return {string}  a lowercased string
   * @example
   import {decamelize} from "@daybrush/utils";
-   console.log(decamelize("transformOrigin")); // transform-origin
+    console.log(decamelize("transformOrigin")); // transform-origin
   console.log(decamelize("abcdEfg", "_")); // abcd_efg
   */
 
@@ -819,7 +819,7 @@ version: 1.1.6
   * @return an array
   * @example
   import {toArray} from "@daybrush/utils";
-   const arr1 = toArray(document.querySelectorAll(".a")); // Element[]
+    const arr1 = toArray(document.querySelectorAll(".a")); // Element[]
   const arr2 = toArray(document.querySelectorAll<HTMLElement>(".a")); // HTMLElement[]
   */
 
@@ -833,7 +833,7 @@ version: 1.1.6
   * @return {number} milliseconds
   * @example
   import {now} from "@daybrush/utils";
-   console.log(now()); // 12121324241(milliseconds)
+    console.log(now()); // 12121324241(milliseconds)
   */
 
 
@@ -849,7 +849,7 @@ version: 1.1.6
   * @param - Returns defaultIndex if not found by the function.
   * @example
   import { findIndex } from "@daybrush/utils";
-   findIndex([{a: 1}, {a: 2}, {a: 3}, {a: 4}], ({ a }) => a === 2); // 1
+    findIndex([{a: 1}, {a: 2}, {a: 3}, {a: 4}], ({ a }) => a === 2); // 1
   */
 
 
@@ -877,7 +877,7 @@ version: 1.1.6
   * @param - Returns defalutValue if not found by the function.
   * @example
   import { find } from "@daybrush/utils";
-   find([{a: 1}, {a: 2}, {a: 3}, {a: 4}], ({ a }) => a === 2); // {a: 2}
+    find([{a: 1}, {a: 2}, {a: 3}, {a: 4}], ({ a }) => a === 2); // {a: 2}
   */
 
 
@@ -893,7 +893,7 @@ version: 1.1.6
   * @return {number} id
   * @example
   import {requestAnimationFrame} from "@daybrush/utils";
-   requestAnimationFrame((timestamp) => {
+    requestAnimationFrame((timestamp) => {
     console.log(timestamp);
   });
   */
@@ -920,10 +920,10 @@ version: 1.1.6
   * @return {void}
   * @example
   import { requestAnimationFrame, cancelAnimationFrame } from "@daybrush/utils";
-   const id = requestAnimationFrame((timestamp) => {
+    const id = requestAnimationFrame((timestamp) => {
     console.log(timestamp);
   });
-   cancelAnimationFrame(id);
+    cancelAnimationFrame(id);
   */
 
 
@@ -947,7 +947,7 @@ version: 1.1.6
   * @return {} hex color
   * @example
   import {cutHex} from "@daybrush/utils";
-   console.log(cutHex("#000000")) // "000000"
+    console.log(cutHex("#000000")) // "000000"
   */
 
 
@@ -961,7 +961,7 @@ version: 1.1.6
   * @return {} rgb color
   * @example
   import {hexToRGBA} from "@daybrush/utils";
-   console.log(hexToRGBA("#00000005"));
+    console.log(hexToRGBA("#00000005"));
   // [0, 0, 0, 1]
   console.log(hexToRGBA("#201045"));
   // [32, 16, 69, 1]
@@ -988,7 +988,7 @@ version: 1.1.6
   * @return {} 6(or 8)-digit hex color
   * @example
   import {toFullHex} from "@daybrush/utils";
-   console.log(toFullHex("#123")); // "#112233"
+    console.log(toFullHex("#123")); // "#112233"
   console.log(toFullHex("#123a")); // "#112233aa"
   */
 
@@ -1008,7 +1008,7 @@ version: 1.1.6
   * @return {} rgba color
   * @example
   import {hslToRGBA} from "@daybrush/utils";
-   console.log(hslToRGBA([150, 0.5, 0.4]));
+    console.log(hslToRGBA([150, 0.5, 0.4]));
   // [51, 153, 102, 1]
   */
 
@@ -1052,7 +1052,7 @@ version: 1.1.6
   * @return {} rgba color
   * @example
   import {stringToRGBA} from "@daybrush/utils";
-   console.log(stringToRGBA("#000000")); // [0, 0, 0, 1]
+    console.log(stringToRGBA("#000000")); // [0, 0, 0, 1]
   console.log(stringToRGBA("rgb(100, 100, 100)")); // [100, 100, 100, 1]
   console.log(stringToRGBA("hsl(150, 0.5, 0.4)")); // [51, 153, 102, 1]
   */
@@ -1117,7 +1117,7 @@ version: 1.1.6
    * @param - If multi is true, a DOMString containing one or more selectors to match against.
    * @example
   import {$} from "@daybrush/utils";
-   console.log($("div")); // div element
+    console.log($("div")); // div element
   console.log($("div", true)); // [div, div] elements
   */
 
@@ -1133,7 +1133,7 @@ version: 1.1.6
   * @return {boolean} return false if the class is not found.
   * @example
   import {hasClass} from "@daybrush/utils";
-   console.log(hasClass(element, "start")); // true or false
+    console.log(hasClass(element, "start")); // true or false
   */
 
 
@@ -1151,7 +1151,7 @@ version: 1.1.6
   * @param className - the class name to add
   * @example
   import {addClass} from "@daybrush/utils";
-   addClass(element, "start");
+    addClass(element, "start");
   */
 
 
@@ -1169,7 +1169,7 @@ version: 1.1.6
   * @param className - the class name to remove
   * @example
   import {removeClass} from "@daybrush/utils";
-   removeClass(element, "start");
+    removeClass(element, "start");
   */
 
 
@@ -1189,7 +1189,7 @@ version: 1.1.6
   * @return returns CSS properties and values.
   * @example
   import {fromCSS} from "@daybrush/utils";
-   console.log(fromCSS(element, ["left", "opacity", "top"])); // {"left": "10px", "opacity": 1, "top": "10px"}
+    console.log(fromCSS(element, ["left", "opacity", "top"])); // {"left": "10px", "opacity": 1, "top": "10px"}
   */
 
 
@@ -1227,7 +1227,7 @@ version: 1.1.6
   * @param - An options object that specifies characteristics about the event listener. The available options are:
   * @example
   import {addEvent} from "@daybrush/utils";
-   addEvent(el, "click", e => {
+    addEvent(el, "click", e => {
     console.log(e);
   });
   */

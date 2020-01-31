@@ -571,19 +571,6 @@ noscript {
 
 .pulse {
     position: absolute;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
     width: 130px;
     height: 130px;
     color: white;
@@ -619,8 +606,17 @@ noscript {
     cursor: pointer;
 }
 
-.phone {
+.phone,
+.text,
+#switchBtn {
     position: absolute;
+    top: 50%;
+    left: 50%;
+}
+
+.phone {
+    margin-top: -25%;
+    margin-left: -25%;
     font-size: 50px;
     -webkit-animation: phone .9s ease-in-out infinite;
     animation: phone .9s ease-in-out infinite;
@@ -645,14 +641,13 @@ noscript {
 }
 
 .text {
-    position: absolute;
     font-size: 15px;
     font-weight: 700;
     text-transform: uppercase;
     opacity: 0;
-    -webkit-transform: scaleX(-1);
-    -ms-transform: scaleX(-1);
-    transform: scaleX(-1);
+    -webkit-transform: scaleX(-1) translate(-50%, -50%);
+    -ms-transform: scaleX(-1) translate(-50%, -50%);
+    transform: scaleX(-1) translate(-50%, -50%);
 }
 
 .text::before {
@@ -744,6 +739,10 @@ noscript {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
