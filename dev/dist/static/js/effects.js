@@ -1,3 +1,7 @@
+"use strict";
+
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
 /*
 Copyright (c) Daybrush
 name: @scenejs/effects
@@ -7,11 +11,9 @@ repository: git+https://github.com/daybrush/scenejs-effects.git
 version: 1.0.0
 */
 (function (global, factory) {
-  typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('scenejs')) :
-  typeof define === 'function' && define.amd ? define(['exports', 'scenejs'], factory) :
-  (global = global || self, factory(global.Scene = global.Scene || {}, global.Scene));
-}(this, function (exports, scenejs) { 'use strict';
-
+  (typeof exports === "undefined" ? "undefined" : _typeof(exports)) === 'object' && typeof module !== 'undefined' ? factory(exports, require('scenejs')) : typeof define === 'function' && define.amd ? define(['exports', 'scenejs'], factory) : (global = global || self, factory(global.Scene = global.Scene || {}, global.Scene));
+})(void 0, function (exports, scenejs) {
+  'use strict';
   /*
   Copyright (c) 2018 Daybrush
   @name: @daybrush/utils
@@ -20,6 +22,7 @@ version: 1.0.0
   repository: https://github.com/daybrush/utils
   @version 0.10.0
   */
+
   /**
   * Check the type that the value is isArray.
   * @memberof Utils
@@ -27,13 +30,11 @@ version: 1.0.0
   * @return {} true if the type is correct, false otherwise
   * @example
   import {isArray} from "@daybrush/utils";
-
-  console.log(isArray([])); // true
+   console.log(isArray([])); // true
   console.log(isArray({})); // false
   console.log(isArray(undefined)); // false
   console.log(isArray(null)); // false
   */
-
 
   function isArray(value) {
     return Array.isArray(value);
@@ -45,8 +46,7 @@ version: 1.0.0
   * @return {} divided texts
   * @example
   import {splitUnit} from "@daybrush/utils";
-
-  console.log(splitUnit("10px"));
+   console.log(splitUnit("10px"));
   // {prefix: "", value: 10, unit: "px"}
   console.log(splitUnit("-10px"));
   // {prefix: "", value: -10, unit: "px"}
@@ -75,7 +75,6 @@ version: 1.0.0
       value: parseFloat(value)
     };
   }
-
   /*
   Copyright (c) 2018 Daybrush
   @name: @daybrush/utils
@@ -84,6 +83,7 @@ version: 1.0.0
   repository: https://github.com/daybrush/utils
   @version 0.7.1
   */
+
   /**
   * divide text by comma.
   * @memberof Utils
@@ -91,12 +91,12 @@ version: 1.0.0
   * @return {Array} divided texts
   * @example
   import {splitComma} from "@daybrush/utils";
-
-  console.log(splitComma("a,b,c,d,e,f,g"));
+   console.log(splitComma("a,b,c,d,e,f,g"));
   // ["a", "b", "c", "d", "e", "f", "g"]
   console.log(splitComma("'a,b',c,'d,e',f,g"));
   // ["'a,b'", "c", "'d,e'", "f", "g"]
   */
+
 
   function splitComma(text) {
     // divide comma(,)
@@ -113,15 +113,14 @@ version: 1.0.0
   * @return an array
   * @example
   import {toArray} from "@daybrush/utils";
-
-  const arr1 = toArray(document.querySelectorAll(".a")); // Element[]
+   const arr1 = toArray(document.querySelectorAll(".a")); // Element[]
   const arr2 = toArray(document.querySelectorAll<HTMLElement>(".a")); // HTMLElement[]
   */
+
 
   function toArray(value) {
     return [].slice.call(value);
   }
-
   /*
   Copyright (c) 2019 Daybrush
   name: keyframer
@@ -130,6 +129,7 @@ version: 1.0.0
   repository: git+https://github.com/daybrush/keyframer.git
   version: 0.1.0
   */
+
 
   var KEYFRAMES_RULE = CSSRule.KEYFRAMES_RULE || CSSRule.WEBKIT_KEYFRAMES_RULE;
   var KEYFRAME_RULE = CSSRule.KEYFRAME_RULE || CSSRule.WEBKIT_KEYFRAME_RULE;
@@ -153,10 +153,8 @@ version: 1.0.0
   //         transform: translate(100px, 0px) rotate(50deg);
   //     }
   // }
-
-  import { getKeyframes } from "keyframer";
-
-  // {
+   import { getKeyframes } from "keyframer";
+   // {
   //     "0%": "opacity: 1; transform: translate(0px, 0px) rotate(0deg)",
   //     "50%": "opacity: 0; transform: translate(50px, 0px) rotate(0deg)",
   //     "100%": "opacity: 1; transform: translate(100px, 0px) rotate(50deg)",
@@ -176,7 +174,7 @@ version: 1.0.0
     });
     var sheetsLength = sheets.length;
 
-    var _loop_1 = function (i) {
+    var _loop_1 = function _loop_1(i) {
       var sheet = sheets[i];
       var keyframesRules = toArray(sheet.cssRules);
       var keyframesRule = keyframesRules.filter(function (rule) {
@@ -204,12 +202,11 @@ version: 1.0.0
     for (var i = 0; i < sheetsLength; ++i) {
       var state_1 = _loop_1(i);
 
-      if (typeof state_1 === "object") return state_1.value;
+      if (_typeof(state_1) === "object") return state_1.value;
     }
 
     return {};
   }
-
   /**
    * @namespace effects
    */
@@ -224,12 +221,10 @@ version: 1.0.0
   // import {set, blink} from "@scenejs/effects";
   // Scene.set("opacity", [0, 1, 0], {duration: 2});
   set("opacity", [0, 1, 0], {duration: 2});
-
-  // Same
+   // Same
   // Scene.blink({duration: 2});
   blink({ duration: 2});
-
-  // Same
+   // Same
   new SceneItem({
       "0%": {
           opacity: 0,
@@ -244,6 +239,7 @@ version: 1.0.0
       duration: 2,
   });
    */
+
 
   function set(property, values, options) {
     var item = new scenejs.SceneItem({}, options);
@@ -264,11 +260,9 @@ version: 1.0.0
    * @param {number} options.duration animation's duration
    * @example
   import { zoomIn } from "@scenejs/effects";
-
-  // Scene.zoomIn({duration: 2});
+   // Scene.zoomIn({duration: 2});
   zoomIn({duration: 2});
-
-  // Same
+   // Same
   new SceneItem({
       "0%": {
           "transform": "scale(0)",
@@ -302,8 +296,7 @@ version: 1.0.0
   import { zoomOut } from "@scenejs/effects";
   // Scene.zoomOut({ duration: 2 });
   zoomOut({ duration: 2 });
-
-  // Same
+   // Same
   new SceneItem({
       "0%": {
           "transform": "scale(1)",
@@ -315,6 +308,7 @@ version: 1.0.0
       duration: 2,
   });
    */
+
 
   function zoomOut(_a) {
     var _b = _a === void 0 ? {} : _a,
@@ -335,8 +329,7 @@ version: 1.0.0
    * @param {number} options.duration animation's duration
    * @example
   import { wipeIn } from "@scenejs/effects";
-
-  // Scene.wipeIn({ property: "left", duration: 2 });
+   // Scene.wipeIn({ property: "left", duration: 2 });
   wipeIn({ property: "left", duration: 2 });
   // Same
   new SceneItem({
@@ -350,6 +343,7 @@ version: 1.0.0
       duration: 2,
   });
    */
+
 
   function wipeIn(_a) {
     var _b = _a === void 0 ? {} : _a,
@@ -387,6 +381,7 @@ version: 1.0.0
   });
    */
 
+
   function wipeOut(_a) {
     var _b = _a === void 0 ? {} : _a,
         _c = _b.from,
@@ -407,8 +402,7 @@ version: 1.0.0
    * @example
   import Scene from "scenejs";
   import {transition, zoomIn, fadeOut} from "@scenejs/effects";
-
-  var transitionScene = new Scene({
+   var transitionScene = new Scene({
     "[data-transition] .target": {},
     "[data-transition] .target2": {},
   }, {
@@ -430,6 +424,7 @@ version: 1.0.0
   );
   transitionScene.play();
    */
+
 
   function transition(item1, item2, transitionObject) {
     var _a;
@@ -468,6 +463,7 @@ version: 1.0.0
   });
    */
 
+
   function fadeIn(_a) {
     var _b = _a === void 0 ? {} : _a,
         _c = _b.from,
@@ -500,6 +496,7 @@ version: 1.0.0
       duration: 2,
   });
    */
+
 
   function fadeOut(_a) {
     var _b = _a === void 0 ? {} : _a,
@@ -537,6 +534,7 @@ version: 1.0.0
   });
    */
 
+
   function blink(_a) {
     var _b = _a === void 0 ? {} : _a,
         _c = _b.from,
@@ -555,8 +553,7 @@ version: 1.0.0
    * @param {boolean} [options.backside=false] - Indicates whether to start from the back.
    * @example
   import { flip } from "@scenejs/effects";
-
-  // flip({ x: 1, y: 1, backside: false })
+   // flip({ x: 1, y: 1, backside: false })
   flip()
     .setDuration(1)
     .setSelector("[data-flip] .target")
@@ -566,6 +563,7 @@ version: 1.0.0
     .setSelector("[data-flip] .target2")
     .play();
    */
+
 
   function flip(_a) {
     var _b;
@@ -617,8 +615,7 @@ version: 1.0.0
    * @param {boolean} [options.backside=false] - Indicates whether to start from the back.
    * @example
   import { flip, flipX } from "@scenejs/effects";
-
-  // flip({ x: 1, y: 0, backside: false })
+   // flip({ x: 1, y: 0, backside: false })
   // flipX({ x: 1, backside: false })
   flipX()
     .setDuration(1)
@@ -629,6 +626,7 @@ version: 1.0.0
     .setSelector("[data-flipx] .target2")
     .play();
    */
+
 
   function flipX(_a) {
     var _b = _a === void 0 ? {} : _a,
@@ -653,8 +651,7 @@ version: 1.0.0
    * @param {boolean} [options.backside=false] - Indicates whether to start from the back.
    * @example
   import { flip, flipY } from "@scenejs/effects";
-
-  // flip({ x: 0, y: 1, backside: false })
+   // flip({ x: 0, y: 1, backside: false })
   // flipY({ y: 1, backside: false })
   flipY()
     .setDuration(1)
@@ -665,6 +662,7 @@ version: 1.0.0
     .setSelector("[data-flipy] .target2")
     .play();
    */
+
 
   function flipY(_a) {
     var _b = _a === void 0 ? {} : _a,
@@ -689,14 +687,12 @@ version: 1.0.0
    * @param {number} [options.frequency=10] - frequency of shakes
    * @example
   import { shake } from "@scenejs/effects";
-
-  shake()
+   shake()
     .setDuration(0.2)
     .setIterationCount("infinite")
     .setSelector("[data-shake] .target")
     .play();
-
-  shake({
+   shake({
       properties: {
         transform: {
           // translateX: ["-5px", "5px"]
@@ -714,6 +710,7 @@ version: 1.0.0
     .setSelector("[data-shake] .target2")
     .play();
    */
+
 
   function shake(_a) {
     var _b = _a === void 0 ? {} : _a,
@@ -773,15 +770,13 @@ version: 1.0.0
    * @param {number} [options.frequency=10] - frequency of shakes
    * @example
   import { shake, shakeX } from "@scenejs/effects";
-
-  // shakeX({ x: ["-5px", "5px"], frequency: 10 })
+   // shakeX({ x: ["-5px", "5px"], frequency: 10 })
   shakeX()
     .setDuration(0.2)
     .setIterationCount("infinite")
     .setSelector("[data-shakex] .target")
     .play();
-
-  shake({
+   shake({
       properties: {
         transform: {
           // translateX: ["-5px", "5px"]
@@ -795,6 +790,7 @@ version: 1.0.0
     .setSelector("[data-shakex] .target2")
     .play();
    */
+
 
   function shakeX(_a) {
     var _b = _a === void 0 ? {} : _a,
@@ -822,15 +818,13 @@ version: 1.0.0
    * @param {number} [options.frequency=10] - frequency of shakes
    * @example
   import { shake, shakeY } from "@scenejs/effects";
-
-  // shakeY({ y: ["-5px", "5px"], frequency: 10 })
+   // shakeY({ y: ["-5px", "5px"], frequency: 10 })
   shakeY()
     .setDuration(0.2)
     .setIterationCount("infinite")
     .setSelector("[data-shakey] .target")
     .play();
-
-  shake({
+   shake({
       properties: {
         transform: {
           // translateY: ["-5px", "5px"]
@@ -844,6 +838,7 @@ version: 1.0.0
     .setSelector("[data-shakey] .target2")
     .play();
    */
+
 
   function shakeY(_a) {
     var _b = _a === void 0 ? {} : _a,
@@ -884,15 +879,14 @@ version: 1.0.0
         transform: translate(-50%, -50%) scale(1);
       }
   }`
-
-  import { keyframer } from "@scenejs/effects";
-
-  keyframer("keyframes", {
+   import { keyframer } from "@scenejs/effects";
+   keyframer("keyframes", {
       duration: 1,
       iterationCount: "infinite",
       selector: ".rect",
   }).play();
    */
+
 
   function keyframer(name, options) {
     return new scenejs.SceneItem(getKeyframes(name), options);
@@ -908,8 +902,7 @@ version: 1.0.0
    * @example
   import { SceneItem } from "scenejs";
   import { kineticFrame } from "@scenejs/effects";
-
-  new SceneItem({
+   new SceneItem({
       0: kineticFrame({ left: "0px", top: "0px" }).set({ transform: "rotate(0deg)"}),
       1: kineticFrame({ left: "50px", top: "0px" }).set({ transform: "rotate(90deg)"}),
       2: kineticFrame({ left: "50px", top: "50px" }).set({ transform: "rotate(180deg)"}),
@@ -917,6 +910,7 @@ version: 1.0.0
       4: kineticFrame({ left: "0px", top: "0px" }).set({ transform: "rotate(360deg)"}),
   }).setSelector(".target").play();
    */
+
 
   function kineticFrame(_a) {
     var _b = _a === void 0 ? {} : _a,
@@ -947,15 +941,14 @@ version: 1.0.0
    * @param {number} [options.end=0] - Index to end typing
    * @param {number} [options.prefix=""] - The prefix string to be attached before text
    * @param {number} [options.suffix=""] - The suffix string to be attached after text
-
-   * @example
+    * @example
   import { typing } from "@scenejs/effects";
-
-  typing({ text: "Make a typing effect with Scene.js."})
+   typing({ text: "Make a typing effect with Scene.js."})
     .setDuration(7)
     .setSelector(".target")
     .play();
    */
+
 
   function typing(_a) {
     var _b = _a === void 0 ? {} : _a,
@@ -1007,6 +1000,4 @@ version: 1.0.0
   exports.wipeOut = wipeOut;
   exports.zoomIn = zoomIn;
   exports.zoomOut = zoomOut;
-
-}));
-//# sourceMappingURL=effects.js.map
+});

@@ -10,6 +10,7 @@ const rename = require("gulp-rename");
 const comments = require("gulp-strip-comments");
 const rigger = require("gulp-rigger");
 const uglify = require("gulp-uglify-es").default;
+const babel = require("gulp-babel");
 const del = require("del");
 const browserSync = require("browser-sync").create();
 
@@ -29,6 +30,7 @@ let path = {
         css: "./src/static/css/*.css",
         scss: "./src/static/scss/style.scss",
         js: "./src/static/js/*.js",
+        jslib: "./src/static/js/lib/*js",
         json: "./src/static/js/*.json",
         images: "./src/static/image/**/*.{jpg,jpeg,png,svg,gif,ico}"
     },
@@ -113,7 +115,7 @@ function css() {
 function styles() {
     "use strict";
 
-    return src(path.src.scss, {base: "./src/static/scss/"})
+    return src(path.src.scss,  {base: "./src/static/scss/"})
         .pipe(plumber())
         .pipe(stylelint({
             reporters: [
@@ -148,6 +150,34 @@ function scripts() {
     "use strict";
 
     return src(path.src.js, {base: "./src/static/js/"})
+        .pipe(plumber())
+        .pipe(rigger())
+        .pipe(babel({
+            presets: [
+                [
+                    "@babel/preset-env",
+                    {
+                        targets: {
+                            "ie": "10"
+                        }
+                    }
+                ]
+            ]
+        }))
+        .pipe(dest(path.dist.js))
+        .pipe(uglify())
+        .pipe(rename({
+            suffix: ".min",
+            extname: ".js"
+        }))
+        .pipe(dest(path.dist.js))
+        .pipe(browserSync.stream());
+}
+
+function jslibs() {
+    "use strict";
+
+    return src(path.src.jslib, {base: "./src/static/js/lib/"})
         .pipe(plumber())
         .pipe(rigger())
         .pipe(dest(path.dist.js))
@@ -191,7 +221,7 @@ function watchFiles() {
     gulp.watch([path.watch.images], images);
 }
 
-const build = gulp.series(clean, gulp.parallel(templates, css, styles, scripts, json, images));
+const build = gulp.series(clean, gulp.parallel(templates, css, styles, scripts, jslibs, json, images));
 const watch = gulp.parallel(build, watchFiles, browser);
 
 // // // // // // 
@@ -202,6 +232,7 @@ exports.templates = templates;
 exports.css = css;
 exports.styles = styles;
 exports.scripts = scripts;
+exports.jslibs = jslibs;
 exports.json = json;
 exports.images = images;
 exports.clean = clean;
